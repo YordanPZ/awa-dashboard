@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard de Calidad del Agua - AquaCare
 
-## Getting Started
+Dashboard profesional para el monitoreo de parámetros de calidad del agua en hospitales, desarrollado con Next.js 15, TypeScript, Tailwind CSS y shadcn/ui.
 
-First, run the development server:
+## 🚀 Características
+
+- **Dashboard Interactivo**: Visualización en tiempo real de parámetros de calidad del agua
+- **Métricas Clave**: Monitoreo de Cloro Residual, pH, Temperatura y Turbidez
+- **Gráficos Avanzados**: Evolución temporal y distribución por ubicación usando Recharts
+- **Sistema de Alertas**: Panel de alertas con estados de color para identificación rápida
+- **Diseño Responsive**: Optimizado para desktop, tablet y móvil
+- **Sidebar Colapsable**: Navegación intuitiva con menú lateral
+- **Tema Profesional**: Diseño médico/hospitalario con colores verde agua
+
+## 🛠️ Tecnologías
+
+- **Framework**: Next.js 15 con App Router
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS v4
+- **Componentes**: shadcn/ui
+- **Gráficos**: Recharts
+- **Iconos**: Lucide React
+- **Fuentes**: Geist Sans & Geist Mono
+
+## 📦 Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/YordanPZ/awa-dashboard.git
+cd awa-dashboard
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Compilar para producción
+npm run build
+
+# Ejecutar en producción
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏥 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Dashboard Principal
+- Tarjetas de métricas con valores actuales
+- Gráfico de líneas para evolución de parámetros (7 días)
+- Gráfico de barras para distribución por ubicación
+- Panel de alertas con estados críticos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Parámetros Monitoreados
+- **Cloro Residual**: 0.5-2.0 mg/L (rango óptimo)
+- **pH**: 6.5-8.5 (rango aceptable)
+- **Temperatura**: 15-25°C (rango normal)
+- **Turbidez**: <1.0 NTU (límite recomendado)
 
-## Learn More
+### Ubicaciones
+- Quirófanos 1 y 2
+- Unidad de Cuidados Intensivos (UCI)
+- Urgencias
+- Plantas hospitalarias
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Diseño
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Colores Principales**: Verde agua/esmeralda para tema médico
+- **Layout**: Sidebar fijo + área principal responsive
+- **Tipografía**: Geist Sans para legibilidad profesional
+- **Componentes**: Sistema de diseño consistente con shadcn/ui
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📱 Responsive Design
 
-## Deploy on Vercel
+- **Desktop**: Layout completo con sidebar visible
+- **Tablet**: Sidebar colapsable, grid adaptativo
+- **Mobile**: Sidebar offcanvas, stack vertical
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Estructura del Proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/
+│   ├── globals.css      # Estilos globales y variables CSS
+│   ├── layout.tsx       # Layout raíz con Sidebar
+│   └── page.tsx         # Dashboard principal
+├── components/ui/       # Componentes shadcn/ui
+├── hooks/
+│   └── use-mobile.ts    # Hook para detección móvil
+└── lib/
+    └── utils.ts         # Utilidades (cn helper)
+```
+
+## 🚀 Deploy en Vercel
+
+Este proyecto está optimizado para despliegue en Vercel:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/YordanPZ/awa-dashboard)
+
+## 📄 Licencia
+
+MIT License - ver [LICENSE](LICENSE) para más detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📞 Contacto
+
+Proyecto desarrollado para monitoreo hospitalario de calidad del agua.
+
+---
+
+**AquaCare Dashboard** - Monitoreo profesional de calidad del agua en entornos hospitalarios.
